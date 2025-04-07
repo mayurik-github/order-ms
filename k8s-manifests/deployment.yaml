@@ -19,3 +19,8 @@ spec:
         image: mayurikulkarni2024/order-ms:latest
         ports:
         - containerPort: 8082
+        env:
+            - name: SPRING_CLOUD_CONSUL_HOST
+              value: "ec2-54-183-224-226.us-west-1.compute.amazonaws.com"
+            - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+              value: "ec2-18-144-101-76.us-west-1.compute.amazonaws.com:9092"
