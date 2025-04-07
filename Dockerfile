@@ -25,5 +25,8 @@ WORKDIR /app
 # Copy the JAR file from the build stage
 COPY --from=build /app/target/order-ms-*.jar /app/order-ms.jar
 
+# Set the command to run the JAR
+CMD ["java", "-jar", "/app/order-ms.jar"]
+
 # Expose the port your app runs on (replace with your actual port)
 EXPOSE 8082
