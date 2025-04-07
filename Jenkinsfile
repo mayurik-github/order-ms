@@ -52,6 +52,7 @@ pipeline {
 		                accessKeyVariable: 'AWS_ACCESS_KEY_ID',
 		                secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
 		            ]]) {
+		            	env.PATH = "/usr/local/bin:$PATH"
 		                sh '''
 		                    # Configure kubectl for EKS
 		                    aws eks update-kubeconfig \
