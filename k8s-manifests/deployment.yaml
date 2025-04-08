@@ -19,8 +19,6 @@ spec:
         image: mayurikulkarni2024/order-ms:latest
         ports:
         - containerPort: 8082
-        env:
-            - name: SPRING_CLOUD_CONSUL_HOST
-              value: "50.18.141.229"
-            - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
-              value: "54.153.127.165:9092"
+        envFrom:
+            - configMapRef:
+                name: order-ms-config

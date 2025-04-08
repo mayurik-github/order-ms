@@ -60,6 +60,7 @@ pipeline {
 		                      --name ${EKS_CLUSTER_NAME}
 		
 		                    # Apply manifests
+		                    kubectl apply -f k8s/configmap.yaml
 		                    kubectl apply -f k8s-manifests/deployment.yaml
 		                    kubectl apply -f k8s-manifests/service.yaml
 		                '''
